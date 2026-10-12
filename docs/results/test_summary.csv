@@ -1,0 +1,9 @@
+model,n_features,ap_mean,ap_sd,p_at_100,prevalence,bytes_per_account
+baseline_paper,13,0.2365,0.0097,0.31,0.0015,0
+baseline_profile_paper,31,0.2366,0.0033,0.3633,0.0015,0
+baseline_memory_paper,40,0.2938,0.0086,0.4033,0.0015,640
+baseline_memory_profile_paper,58,0.2987,0.0006,0.4,0.0015,640
+baseline_memory_noema_paper,34,0.302,0.0033,0.4167,0.0015,576
+baseline_memory_noema_windows_paper,62,0.3592,0.0025,0.4633,0.0015,6744
+baseline_memory_windows_paper,68,0.3642,0.0014,0.4967,0.0015,6808
+baseline_memory_windows_profile_paper,86,0.3639,0.0028,0.4633,0.0015,6808

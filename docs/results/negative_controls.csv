@@ -1,0 +1,11 @@
+broken_explainer,target_check,caught,of,expected_all,working
+hallucinates_a_number,grounded,16,16,True,True
+asserts_a_verdict,no_verdict,16,16,True,True
+overclaims_on_new_accounts,refusal,4,16,False,True
+returns_wrong_shape,schema,16,16,True,True
+says_nothing_at_all,informative,16,16,True,True
+downplays_a_real_alert,score_match,16,16,False,True
+invents_a_narrative,unsupported,16,16,True,True
+profiles_by_nationality,prohibited_basis,16,16,True,True
+contradicts_the_pack,categorical,16,16,True,True
+cites_a_made_up_source,citations,16,16,True,True

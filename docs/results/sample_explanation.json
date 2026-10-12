@@ -1,0 +1,141 @@
+{
+  "evidence": {
+    "transaction": {
+      "occurred_at": "2025-11-20T13:29:09",
+      "amount_paid": 16.72,
+      "payment_currency": "CNY",
+      "receiving_currency": "CNY",
+      "payment_format": "Cash",
+      "cross_currency": false,
+      "hour_of_day": 13
+    },
+    "risk": {
+      "score": 0.9998,
+      "model": "xgboost_bounded_memory"
+    },
+    "sender": {
+      "transactions_seen_before": 3473,
+      "usual_amount": 1377.45,
+      "recent_mean_amount": 131.33,
+      "distinct_counterparties": 266.2,
+      "counterparty_is_new": false,
+      "recent_transactions": [
+        {
+          "transaction_id": 1256101,
+          "occurred_at": "2025-06-05T16:41:51",
+          "amount_paid": 335.13,
+          "direction": "in",
+          "score": null
+        },
+        {
+          "transaction_id": 1256338,
+          "occurred_at": "2025-06-05T17:02:11",
+          "amount_paid": 274.42,
+          "direction": "in",
+          "score": null
+        },
+        {
+          "transaction_id": 1256419,
+          "occurred_at": "2025-06-05T17:09:12",
+          "amount_paid": 109.64,
+          "direction": "in",
+          "score": null
+        },
+        {
+          "transaction_id": 1256913,
+          "occurred_at": "2025-06-05T17:52:19",
+          "amount_paid": 9.28,
+          "direction": "in",
+          "score": null
+        },
+        {
+          "transaction_id": 1257413,
+          "occurred_at": "2025-06-05T18:47:12",
+          "amount_paid": 37.27,
+          "direction": "in",
+          "score": null
+        }
+      ],
+      "earlier_flagged_transactions": [],
+      "flagged_count": 0
+    },
+    "receiver": {
+      "transactions_seen_before": 74,
+      "usual_amount": 1612.51,
+      "recent_mean_amount": 53.45,
+      "distinct_counterparties": 50.7,
+      "counterparty_is_new": false,
+      "recent_transactions": [
+        {
+          "transaction_id": 1444808,
+          "occurred_at": "2025-06-27T08:26:02",
+          "amount_paid": 105.86,
+          "direction": "in",
+          "score": null
+        },
+        {
+          "transaction_id": 1447675,
+          "occurred_at": "2025-06-27T13:28:24",
+          "amount_paid": 115.12,
+          "direction": "out",
+          "score": null
+        },
+        {
+          "transaction_id": 1453100,
+          "occurred_at": "2025-06-28T05:22:00",
+          "amount_paid": 7.35,
+          "direction": "in",
+          "score": null
+        },
+        {
+          "transaction_id": 1456630,
+          "occurred_at": "2025-06-28T13:04:37",
+          "amount_paid": 102.77,
+          "direction": "out",
+          "score": null
+        },
+        {
+          "transaction_id": 1458549,
+          "occurred_at": "2025-06-28T16:02:08",
+          "amount_paid": 35.29,
+          "direction": "out",
+          "score": null
+        }
+      ],
+      "earlier_flagged_transactions": [],
+      "flagged_count": 0
+    },
+    "comparison": {
+      "amount_vs_sender_usual": 0.0,
+      "sender_has_no_history": false,
+      "receiver_has_no_history": false
+    },
+    "typologies": [
+      {
+        "id": "counterparty_expansion",
+        "name": "Sudden counterparty expansion",
+        "description": "An account that dealt with a small, stable set of counterparties begins dealing with\nmany new ones in a short period. Indicators: a rise in distinct counterparties relative\nto the account's own history; a high share of first-time counterparties.\nDistinguishing note: a growing business naturally expands its counterparty set. Rate of\nchange relative to the account's own past is the signal, not the absolute count."
+      },
+      {
+        "id": "behaviour_change",
+        "name": "Sudden change in account behaviour",
+        "description": "An account that has been consistent begins transacting at a different scale, time of\nday, or with a different type of counterparty. Indicators: a payment far above the\naccount's own running average; activity outside its usual hours; a first-time\ncounterparty after a long history of the same few.\nDistinguishing note: genuine life events, seasonal business and one-off large purchases\nproduce the same signature. Magnitude of deviation matters more than deviation itself."
+      },
+      {
+        "id": "layering",
+        "name": "Layering",
+        "description": "Funds are moved through a chain of accounts to separate them from their origin. Each\nhop is unremarkable alone; the pattern only appears across the chain. Indicators: an\naccount that receives and forwards similar value within a short interval; a\ncounterparty that is itself new; low balance retention.\nDistinguishing note: payment processors, escrow and treasury sweep accounts show the\nsame pass-through shape as ordinary business."
+      }
+    ]
+  },
+  "explanation": {
+    "summary": "Risk score 0.9998 on a payment of 16.72 CNY. The sender has 3473 prior transactions averaging 1377.45.",
+    "key_signals": [
+      "Flagged on the combined model score rather than any single signal"
+    ],
+    "sufficient_evidence": true,
+    "cited_typologies": [
+      "counterparty_expansion"
+    ]
+  }
+}

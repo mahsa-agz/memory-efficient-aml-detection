@@ -1,0 +1,9 @@
+model,valid_ap,valid_p_at_100
+baseline_paper,0.2454,0.34
+baseline_memory_noema_paper,0.3462,0.58
+baseline_memory_paper,0.3344,0.51
+baseline_memory_noema_windows_paper,0.3834,0.46
+baseline_memory_windows_paper,0.3802,0.47
+baseline_profile_paper,0.247,0.35
+baseline_memory_profile_paper,0.3438,0.52
+baseline_memory_windows_profile_paper,0.3907,0.56

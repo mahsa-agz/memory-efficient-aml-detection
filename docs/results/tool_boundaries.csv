@@ -1,0 +1,6 @@
+case,passed,got
+unrelated account refused,True,"{'error': 'out_of_scope', 'detail': ""account A009852 is not part of th"
+oversized limit clamped,True,limit_applied=20
+no transactions from the future,True,0 at or after the alert
+"unknown tool refused, not crashed",True,"{'error': 'unknown_tool', 'detail': 'delete_account'}"
+"bad arguments refused, not crashed",True,"{'error': 'bad_arguments', 'detail': ""AlertToolbox.get_recent_transact"

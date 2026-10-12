@@ -1,0 +1,9 @@
+model,memory_per_account,valid_ap,test_ap,test_ap_sd,test_p_at_100
+baseline,none,0.245,0.237,0.01,0.31
++ long-term,O(1),0.346,0.302,0.003,0.417
++ long-term + decay,O(1),0.334,0.294,0.009,0.403
++ long-term + window,O(k),0.383,0.359,0.003,0.463
++ long-term + decay + window,O(k),0.38,0.364,0.001,0.497
+baseline + profile,none,0.247,0.237,0.003,0.363
++ long-term + decay + profile,O(1),0.344,0.299,0.001,0.4
++ all memory + profile,O(k),0.391,0.364,0.003,0.463
